@@ -1,0 +1,58 @@
+--night: #161513ff;
+--antiflash-white: #EAE7EBff;
+--blue-ncs: #2A85AEff;
+--eerie-black: #231F1Cff;
+--platinum: #D4DBE3ff;
+
+
+color theme - colorful
+#392A59
+#118EBF
+#5EA4BF
+#A66D3C
+#F2F2F2
+
+deep
+#432D73
+#0D0D0D
+#392A59
+#5EA4BF
+#F2F2F2
+
+muted
+#392A59
+#118EBF
+#5EA4BF
+#D5F2EF
+#A67449
+
+bright
+#392A59
+#118EBF
+#F2F2F2
+#8C8C8C
+#0D0D0D
+
+dark
+#262425
+
+light
+#F3F3F3ff
+
+navy blue
+#1D1E30ff
+
+color gradient
+
+font families 
+
+Arial
+Comic Sans
+Verdana
+Tahoma
+Century Gothic
+Trebuchet
+Calibri
+Open Sans
+
+Open sans for headings and Arial for body elements
