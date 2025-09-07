@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admissions/application</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles/styles.css">
+  <link rel="stylesheet" href="/assets/styles/responsive.css">
+  <link rel="stylesheet" href="/assets/styles/navbar-styles.css">
+</head>
+
+<body>
+  <!-- Top bar -->
+ <div id="topbar-container"></div>
+
+  <!-- Navigation -->
+ <div id="navbar-container"></div>
+
+<!-- application section -->
+<section class="application-section py-5">
+  <div class="container text-center">
+    <h2 class="mb-3">How to Apply</h2>
+    <p class="mb-5">Follow these simple steps to join Msambweni T.V.C. and start your journey towards a rewarding career.</p>
+
+    <div class="row g-4 justify-content-center">
+      <!-- Step 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm p-4">
+          <div class="mb-3">
+            <div class="rounded-circle bg-light mx-auto d-flex align-items-center justify-content-center" style="width: 70px; height: 70px;">
+              <i class="bi bi-download" style="font-size: 2rem; color: #a97442;"></i>
+            </div>
+          </div>
+          <h5 class="fw-bold">Step 1: Get the Form</h5>
+          <p class="text-muted">Download the application form or pick one up from our admissions office.</p>
+          <a href="/assets/downloads/forms/application-form.pdf" target="_blank" class="btn btn-outline-primary mt-2">
+            <i class="bi bi-download me-1"></i> Download Form
+          </a>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm p-4">
+          <div class="mb-3">
+            <div class="rounded-circle bg-light mx-auto d-flex align-items-center justify-content-center" style="width: 70px; height: 70px;">
+              <i class="bi bi-list-check" style="font-size: 2rem; color: #a97442;"></i>
+            </div>
+          </div>
+          <h5 class="fw-bold">Step 2: Fill & Submit</h5>
+          <p class="text-muted">Fill out the form completely and attach all required documents. Submit your application online or in person.</p>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm p-4">
+          <div class="mb-3">
+            <div class="rounded-circle bg-light mx-auto d-flex align-items-center justify-content-center" style="width: 70px; height: 70px;">
+              <i class="bi bi-check-circle" style="font-size: 2rem; color: #a97442;"></i>
+            </div>
+          </div>
+          <h5 class="fw-bold">Step 3: Admission</h5>
+          <p class="text-muted">Once your application is reviewed and accepted, you will receive an admission letter.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Apply Online Button -->
+    <div class="mt-5">
+      <a href="/pages/admissions/apply-online.html" class="btn btn-lg" style="background-color: #a97442; color: white;">
+        Apply Online Now
+      </a>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+<div id="footer-container"></div>
+  <button id="toTopBtn" title="Go to top">&#8679;</button>
+
+<script>
+  const loadPartial = async (id, file) => {
+    const response = await fetch(file);
+    const html = await response.text();
+    document.getElementById(id).innerHTML = html;
+  }
+
+  loadPartial("topbar-container", "/includes/top-bar.html");
+  loadPartial("navbar-container", "/includes/navber.html");
+  loadPartial("footer-container", "/includes/footer.html");
+</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <script src="/assets/js/script.js"></script>
+  
+</body>
+
+</html>

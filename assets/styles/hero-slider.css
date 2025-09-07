@@ -1,0 +1,206 @@
+
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap'); */
+/* Hero Slider Styles */
+/* Custom Slider Wrapper */
+.slider {
+  height: 100vh;
+  width: 100%;
+  /* overflow: hidden; */
+  position: relative;
+  /* margin-top: -50px; Adjust if you have a fixed navbar */
+}
+
+/* Slider List Items */
+.slider .list .item {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.slider .list .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slider .list .item .content {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1140px;
+  max-width: 80%;
+  padding-right: 30%;
+  color: #fff;
+  text-shadow: 0 5px 10px #0005;
+  box-sizing: border-box;
+}
+
+.content .type {
+  font-size: 2rem;
+  color: #14ff72cb;
+  font-weight: 600;
+}
+.content .title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 0.5em 0;
+}
+.content .description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.button {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+.button button {
+  background: #eee;
+  border: none;
+  padding: 10px 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button button:hover {
+  letter-spacing: 1px;
+}
+.button button:nth-child(2) {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+/* Thumbnail Navigation */
+.thumbnail {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  z-index: 2;
+}
+.thumbnail .item {
+  width: 120px;
+  height: 80px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.thumbnail .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Prev & Next Buttons */
+.nextPrevArrows {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 2;
+}
+.nextPrevArrows button {
+  width: 40px;
+  height: 40px;
+  background-color: #14ff72cb;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.nextPrevArrows button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Animation Defaults */
+.slider .list .item:nth-child(1) {
+  z-index: 1;
+}
+.slider .list .item:nth-child(1) .content .title,
+.slider .list .item:nth-child(1) .content .type,
+.slider .list .item:nth-child(1) .content .description,
+.slider .list .item:nth-child(1) .content .button {
+  opacity: 0;
+  transform: translateY(50px);
+  filter: blur(10px);
+  animation: showContent 0.5s forwards;
+}
+.slider .list .item:nth-child(1) .content .type { animation-delay: 0.3s; }
+.slider .list .item:nth-child(1) .content .title { animation-delay: 0.5s; }
+.slider .list .item:nth-child(1) .content .description { animation-delay: 0.7s; }
+.slider .list .item:nth-child(1) .content .button { animation-delay: 0.9s; }
+
+@keyframes showContent {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* Slider transition effect */
+.slider.next .list .item:nth-child(1) img {
+  animation: slideIn 0.5s forwards;
+}
+.slider.prev .list .item:nth-child(2) img {
+  animation: slideOut 0.5s forwards;
+}
+@keyframes slideIn {
+  0% {
+    width: 120px;
+    height: 80px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 20px;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    border-radius: 0;
+  }
+}
+@keyframes slideOut {
+  100% {
+    width: 120px;
+    height: 80px;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 10px;
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .slider .list .item .content {
+    padding-right: 0;
+    text-align: center;
+  }
+  .slider .list .item .content .title {
+    font-size: 2rem;
+  }
+  .slider .list .item .content .type {
+    font-size: 1.5rem;
+  }
+  .thumbnail {
+    display: none !important;
+    bottom: 20px;
+  }
+  .thumbnail .item {
+    width: 80px;
+    height: 50px;
+  }
+}

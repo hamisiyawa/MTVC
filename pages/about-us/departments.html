@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About-us/departments</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles/styles.css">
+  <link rel="stylesheet" href="/assets/styles/responsive.css">
+  <link rel="stylesheet" href="/assets/styles/navbar-styles.css">
+</head>
+
+<body>
+  <!-- Top bar -->
+ <div id="topbar-container"></div>
+
+  <!-- Navigation -->
+<div id="navbar-container"></div>
+
+<!-- departments section -->
+<section class="py-5" style="background-color: var(--color-hero-bg);">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-3" style="color: #3e2a68;">Our Departments</h2>
+    <p class="text-center mb-5" style="color: #6b5991;">Our academic departments are the heart of our institution, each offering specialized training and education to prepare students for their chosen careers.</p>
+
+    <div class="row g-4">
+      <!-- Building & Civil Engineering -->
+      <div class="col-md-4">
+        <div class="border rounded-4 p-4 h-100 position-relative" style="background-color: white;">
+          <i class="bi bi-building-fill-gear position-absolute top-0 end-0 m-3 fs-3 text-secondary"></i>
+          <h5 class="fw-bold" style="color: #3e2a68;">Building & Civil Engineering</h5>
+          <p style="color: #5c4b80;">Constructing the world of tomorrow with solid foundations in theory and practice.</p>
+        </div>
+      </div>
+
+      <!-- Electrical & Electronics Engineering -->
+      <div class="col-md-4">
+        <div class="border rounded-4 p-4 h-100 position-relative" style="background-color: white;">
+          <i class="bi bi-lightning-charge-fill position-absolute top-0 end-0 m-3 fs-3 text-secondary"></i>
+          <h5 class="fw-bold" style="color: #3e2a68;">Electrical & Electronics Engineering</h5>
+          <p style="color: #5c4b80;">Powering innovation through circuits, systems, and smart technology.</p>
+        </div>
+      </div>
+
+      <!-- Mechanical Engineering -->
+      <div class="col-md-4">
+        <div class="border rounded-4 p-4 h-100 position-relative" style="background-color: white;">
+          <i class="bi bi-gear-fill position-absolute top-0 end-0 m-3 fs-3 text-secondary"></i>
+          <h5 class="fw-bold" style="color: #3e2a68;">Mechanical Engineering</h5>
+          <p style="color: #5c4b80;">Designing, creating, and maintaining the machines that drive our world.</p>
+        </div>
+      </div>
+
+      <!-- Business & Entrepreneurship -->
+      <div class="col-md-4">
+        <div class="border rounded-4 p-4 h-100 position-relative" style="background-color: white;">
+          <i class="bi bi-briefcase-fill position-absolute top-0 end-0 m-3 fs-3 text-secondary"></i>
+          <h5 class="fw-bold" style="color: #3e2a68;">Business & Entrepreneurship</h5>
+          <p style="color: #5c4b80;">Empowering students with skills to start and manage successful enterprises.</p>
+        </div>
+      </div>
+
+      <!-- ICT & Computer Studies -->
+      <div class="col-md-4">
+        <div class="border rounded-4 p-4 h-100 position-relative " style="background-color: white;">
+          <i class="bi bi-laptop-fill position-absolute top-0 end-0 m-3 fs-3 text-secondary"></i>
+          <h5 class="fw-bold" style="color: #3e2a68;">ICT & Computer Studies</h5>
+          <p style="color: #5c4b80;">Equipping learners with essential digital and programming skills for the modern world.</p>
+        </div>
+      </div>
+
+      <!-- Hospitality & Institutional Management -->
+      <div class="col-md-4">
+        <div class="border rounded-4 p-4 h-100 position-relative" style="background-color: white;">
+          <i class="bi bi-cup-hot-fill position-absolute top-0 end-0 m-3 fs-3 text-secondary"></i>
+          <h5 class="fw-bold" style="color: #3e2a68;">Hospitality & Institutional Management</h5>
+          <p style="color: #5c4b80;">Training professionals in culinary arts, accommodation, and event planning.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end departments section -->
+
+
+  <!-- Footer -->
+<div id="footer-container"></div>
+<button id="toTopBtn" title="Go to top">&#8679;</button>
+<script>
+const loadPartial = async (id, file) => {
+  const response = await fetch(file);
+  const html = await response.text();
+  document.getElementById(id).innerHTML = html;
+}
+
+loadPartial("topbar-container", "/includes/top-bar.html");
+loadPartial("navbar-container", "/includes/navber.html");
+loadPartial("footer-container", "/includes/footer.html");
+</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <script src="/assets/js/script.js"></script>
+  
+</body>
+
+</html>

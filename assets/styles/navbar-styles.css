@@ -1,0 +1,74 @@
+.navbar-nav {
+  display: flex;
+  gap: 0.9rem;
+  align-items: center;
+}
+
+/* Keep Bootstrap responsive behavior but improve look */
+
+.custom-navbar {
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+  font-weight: 500;
+}
+
+.custom-navbar .nav-link {
+  color: #333 !important;
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #118ebf !important;
+}
+
+/* Desktop dropdown hover */
+@media (min-width: 992px) {
+  .custom-navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+
+
+/* Dropdown menu style */
+.custom-navbar .dropdown-menu {
+  border: none;
+  border-radius: 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+.custom-navbar .dropdown-item {
+  padding: 0.6rem 1.2rem;
+}
+
+.custom-navbar .dropdown-item:hover {
+  background-color: #118ebf;
+  color: #fff;
+}
+}
+
+/* Mobile tweaks */
+@media (max-width: 991px) {
+  .custom-navbar .collapse {
+    background-color: #118ebf;
+    height:90vh;
+    margin: 0 !important;
+    padding-bottom: 20px;
+  }
+  .custom-navbar .collapse{
+    
+  }
+  .custom-navbar .dropdown-menu {
+    box-shadow: none !important;
+    display: none;
+    border-top: 1px solid #eee;
+  }
+  .custom-navbar .nav-link:hover {
+    color: white !important;
+  }
+  .custom-navbar .dropdown-menu.show{
+    display: block;
+    height: fit-content;
+    margin: 0.9rem;
+  }
+}
