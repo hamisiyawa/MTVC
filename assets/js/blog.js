@@ -2,10 +2,10 @@
         const blogPosts = [
             {
                 id: 1,
-                title: "Student Innovation Lab Opens New Makerspace",
-                excerpt: "State-of-the-art equipment and collaborative workspace now available for all students to bring their creative ideas to life.",
+                title: "Growth and Digital Skills Program",
+                excerpt: "The college has seen significant growth in student numbers and is part of the Jitume Digital Skills Program, which equips students with digital skills and connects them to online work. ",
                 category: "academics",
-                author: "Prof. Michael Chen",
+                author: "Md. Mariam Kimonyi",
                 date: "March 12, 2024",
                 readTime: "5 min read",
                 image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop",
@@ -155,6 +155,33 @@
                     
                     <p>Planning is already underway for next year's festival, with organizers hoping to expand to include even more countries and cultural activities. The International Student Office is also exploring the possibility of monthly cultural events throughout the academic year.</p>
                 `
+            },
+            {
+                id: 7,
+                title: "International Food Festival Celebrates Campus Diversity",
+                excerpt: "Students from 25 countries showcase their cultures through traditional cuisine and performances.",
+                category: "events",
+                author: "International Student Office",
+                date: "March 1, 2024",
+                readTime: "4 min read",
+                image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&h=600&fit=crop",
+                fullContent: `
+                    <p>The annual International Food Festival transformed the Student Union into a vibrant celebration of global cultures, with students from 25 countries sharing traditional cuisine, music, and performances with the campus community.</p>
+                    
+                    <p>The event, organized by the International Student Office in partnership with cultural student organizations, featured authentic dishes prepared by international students and their families. From Korean kimchi and Ethiopian injera to Mexican tamales and Indian biryani, the festival offered a culinary journey around the world.</p>
+                    
+                    <p>"Food is such a powerful way to share culture and build connections," said Dr. Maria Gonzalez, Director of International Student Services. "This festival creates opportunities for our domestic and international students to learn from each other in a fun, welcoming environment."</p>
+                    
+                    <p>Beyond the food offerings, the festival featured cultural performances throughout the day. Highlights included traditional Chinese lion dancing, Bollywood dance performances, African drumming, and a mariachi band. Students also set up information booths about their home countries, sharing photos, artifacts, and stories.</p>
+                    
+                    <p>The festival served as both a celebration and an educational opportunity. Many attendees learned about new cultures and made connections with international students. Several domestic students expressed interest in study abroad programs after conversations with their international peers.</p>
+                    
+                    <p>Junior international student Priya Patel from India, who helped organize the event, shared her perspective: "When I first arrived here, I was nervous about sharing my culture. Events like this show me how much people appreciate learning about different traditions. It makes me feel proud of where I come from."</p>
+                    
+                    <p>The festival also raised funds for the International Student Emergency Fund, which provides financial assistance to international students facing unexpected hardships. This year's event raised over $3,000 for the fund.</p>
+                    
+                    <p>Planning is already underway for next year's festival, with organizers hoping to expand to include even more countries and cultural activities. The International Student Office is also exploring the possibility of monthly cultural events throughout the academic year.</p>
+                `
             }
         ];
 
@@ -260,7 +287,14 @@
         // Load more functionality
         document.getElementById('loadMoreBtn').addEventListener('click', () => {
             // In a real application, this would load more posts from the server
-            alert('Oops, no more posts to load!');
+            const currentCount = currentPosts.length;
+            const nextPosts = blogPosts.slice(currentCount, currentCount + 3);
+            if (nextPosts.length > 0) {
+                currentPosts = currentPosts.concat(nextPosts);
+                renderBlogPosts();
+            } else {
+                alert('Oops, no more posts to load!');
+            }
         });
 
         // Initial render
