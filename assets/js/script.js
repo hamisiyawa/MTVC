@@ -48,3 +48,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // delay slightly so partials (topbar, navbar, footer) finish loading
   setTimeout(initStickyNavbar, 400);
 });
+
+// ==============================
+// Responsive Navbar Menu
+// ==============================
+

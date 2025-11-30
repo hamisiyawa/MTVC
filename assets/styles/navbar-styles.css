@@ -54,14 +54,23 @@
     height:90vh;
     margin: 0 !important;
     padding-bottom: 20px;
+    width: 100%;
   }
   .custom-navbar .collapse{
-    
+    padding: 0;
+  }
+
+  .custom-navbar .dropdown{
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    text-align: center;
   }
   .custom-navbar .dropdown-menu {
     box-shadow: none !important;
     display: none;
     border-top: 1px solid #eee;
+    margin: 0 !important;
+    border-radius: 0 !important;
   }
   .custom-navbar .nav-link:hover {
     color: white !important;
@@ -70,5 +79,8 @@
     display: block;
     height: fit-content;
     margin: 0.9rem;
+    width: 100%;
   }
 }
+
+
